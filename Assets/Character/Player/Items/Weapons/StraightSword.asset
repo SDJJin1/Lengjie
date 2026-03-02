@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d26a5b9b5728c947b324441b9f29ac5, type: 3}
+  m_Name: StraightSword
+  m_EditorClassIdentifier: 
+  itemName: Sword
+  itemIcon: {fileID: 21300000, guid: 8f28955d92038974a9b04aafaeea79b0, type: 3}
+  itemDescription: 
+  itemWeight: 0
+  weaponModel: {fileID: 8881149150967125772, guid: 10c5ed34a3581b14caf9af788f56285f, type: 3}
+  weaponType: 0
+  strength: 0
+  intelligence: 0
+  physicalDamage: 20
+  baseStaminaCost: 20
+  lightAttackCombos:
+  - {fileID: 11400000, guid: 3240b2bda66ed2f43a3e6ef52a690f5e, type: 2}
+  - {fileID: 11400000, guid: bd93a960f18c5b34abad731c715088f4, type: 2}
+  heavyAttackCombos:
+  - {fileID: 11400000, guid: ae01967c0994fbf49bb65e4583444e48, type: 2}
+  - {fileID: 11400000, guid: 40c602d0cd418dd4788b9993202b386a, type: 2}
+  RollAttack: {fileID: 11400000, guid: d364b46e4dd9bb6429e989d947df18c5, type: 2}
+  RunAttack: {fileID: 11400000, guid: 967f48afdb697894ea18b4dab85fb549, type: 2}
+  BackStepAttack: {fileID: 11400000, guid: 4f3df5f2f68c7854abee8bb7c07554c4, type: 2}

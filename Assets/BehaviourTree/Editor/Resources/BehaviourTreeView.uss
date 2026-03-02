@@ -1,0 +1,129 @@
+/* 
+    行为树编辑器节点样式定义
+    定义行为树编辑器界面中节点的视觉样式，包括背景、连接点、字体等
+    通过CSS自定义属性和Unity UI Toolkit样式系统控制界面外观
+*/
+
+/* 网格背景样式：定义编辑器画布的网格线背景 */
+GridBackground {
+    /* 背景颜色：深灰色背景 */
+    --grid-background-color: rgb(40, 40, 40);
+
+    /* 细线颜色：半透明的浅灰色，用于次要网格线 */
+    --line-color: rgba(193, 196, 192, 0.1);
+
+    /* 粗线颜色：与细线颜色相同，用于主要网格线 */
+    --thick-line-color: rgba(193, 196, 192, 0.1);
+
+    /* 网格间距：网格线之间的间距为15像素 */
+    --spacing: 15;
+}
+
+/* 选中状态下的节点标题样式：当节点被选中时应用 */
+:selected > #node-border #title {
+    /* 背景图片：使用资源NodeBg1作为选中状态的背景 */
+    background-image: resource('NodeBg1');
+
+    /* 字体样式：加粗显示 */
+    -unity-font-style: bold;
+}
+
+/* 悬停状态下的节点标题样式：当鼠标悬停在节点上时应用 */
+:hover > #node-border #title {
+    /* 背景图片：与选中状态相同的背景图片 */
+    background-image: resource('NodeBg1');
+
+    /* 字体样式：加粗显示 */
+    -unity-font-style: bold;
+}
+
+/* 节点标题默认样式：定义节点标题的基本外观 */
+#node-border #title {
+    /* 字体定义：不使用任何字体定义 */
+    -unity-font-definition: none;
+
+    /* 字体：使用自定义字体文件（阿朱泡泡体） */
+    -unity-font: url('project://database/Assets/BehaviourTree/Font/%E9%98%BF%E6%9C%B1%E6%B3%A1%E6%B3%A1%E4%BD%93.ttf?fileID=12800000&guid=f82360745acee1848973def8780f4702&type=3#阿朱泡泡体');
+
+    /* 字体大小：18像素 */
+    font-size: 18px;
+
+    /* 背景图片：默认背景图片NodeBg2 */
+    background-image: resource('NodeBg2');
+
+    /* 布局属性：允许换行，垂直方向排列 */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* 移动点图标样式：用于表示节点可移动的操控点 */
+#MovePoint {
+    /* 背景图片：使用pointIcon.png作为图标 */
+    background-image: url('project://database/Assets/BehaviourTree/Icons/pointIcon.png?fileID=21300000&guid=94cab1fd1afa26c4a836fd2e66320ba8&type=3#pointIcon');
+
+    /* 尺寸：20x20像素的正方形 */
+    width: 20px;
+    height: 20px;
+
+    /* 颜色滤镜：将图标染成青色，用于视觉突出 */
+    -unity-background-image-tint-color: rgb(0, 255, 226);
+
+    /* 定位：绝对定位，相对于父容器 */
+    position: absolute;
+}
+
+/* 连接线锚点样式：节点之间连接线的端点 */
+#unity-dragline-anchor {
+    /* 背景颜色：与网格背景相同的深灰色 */
+    background-color: rgb(40, 40, 40);
+}
+
+/* 端口连接器文本样式：用于端口上的文本标签 */
+.port.connectorText {
+    /* 边距和尺寸：隐藏文本标签，不占用空间 */
+    margin: 0;
+    height: 0;
+    width: 0;
+}
+
+/* 输入端口样式：节点左侧的输入端口 */
+.port.input {
+    /* 对齐方式：自动对齐 */
+    align-items: auto;
+
+    /* 尺寸：固定高度18像素，宽度208像素 */
+    height: 18px;
+    width: 208px;
+}
+
+/* 输入端口连接器样式：输入端口内的圆形连接点 */
+.port.input > #connector {
+    /* 边距：右侧98像素，左侧0，使连接点居左 */
+    margin-right: 98px;
+    margin-left: 0;
+
+    /* 最小尺寸：8x6像素，确保连接点可见 */
+    min-height: 8px;
+    min-width: 6px;
+}
+
+/* 输出端口样式：节点右侧的输出端口 */
+.port.output {
+    /* 对齐方式：顶部对齐，反转列方向（从上到下） */
+    align-items: flex-start;
+    flex-direction: column-reverse;
+
+    /* 尺寸：固定高度18像素，宽度200像素 */
+    height: 18px;
+    width: 200px;
+}
+
+/* 输出端口连接器样式：输出端口内的圆形连接点 */
+.port.output > #connector {
+    /* 边距：左侧90像素，使连接点居右 */
+    margin-left: 90px;
+
+    /* 最小尺寸：8x6像素，确保连接点可见 */
+    min-height: 8px;
+    min-width: 6px;
+}

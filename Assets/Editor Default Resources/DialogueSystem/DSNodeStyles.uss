@@ -1,0 +1,153 @@
+/* 
+   对话系统节点样式定义
+   定义对话图编辑器中节点及其内部元素的视觉样式
+   通过CSS类名和Unity UI Toolkit属性控制节点的外观和布局
+*/
+
+/* 节点扩展容器：包含节点的额外内容区域，如折叠区域 */
+.ds-node__extension-container
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 深灰色背景，与节点主体一致 */
+    padding: var(--ds-metrics-window-pixels-8);            /* 8像素内边距 */
+}
+
+/* 节点主容器：包含节点的核心内容区域 */
+.ds-node__main-container
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 深灰色背景 */
+}
+
+/* 节点自定义数据容器：用于容纳折叠区域等自定义内容 */
+.ds-node__custom-data-container
+{
+    background-color: var(--ds-colors-window-dark-grey-3);  /* 稍浅的深灰色背景 */
+    border-radius: var(--ds-metrics-window-pixels-4);       /* 4像素圆角 */
+    padding: var(--ds-metrics-window-pixels-8);             /* 8像素内边距 */
+}
+
+/* 节点文本输入框通用样式：应用于所有节点内的文本输入框 */
+.ds-node__textfield > .unity-text-field__input
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 深灰色背景 */
+    border-color: var(--ds-colors-window-dark-grey-6);      /* 较深的灰色边框 */
+    border-radius: var(--ds-metrics-window-pixels-4);       /* 4像素圆角 */
+    max-width: var(--ds-metrics-window-pixels-240);         /* 最大宽度240像素 */
+    min-width: var(--ds-metrics-window-pixels-160);         /* 最小宽度160像素 */
+    padding: var(--ds-metrics-window-pixels-8);             /* 8像素内边距 */
+}
+
+/* 隐藏文本输入框：通常用于节点标题等不可见输入框 */
+.ds-node__textfield__hidden > .unity-text-field__input
+{
+    background-color: transparent;  /* 透明背景 */
+    border-color: transparent;      /* 透明边框 */
+}
+
+/* 隐藏文本输入框获取焦点时的样式 */
+.ds-node__textfield__hidden > .unity-text-field__input:focus
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 获取焦点时显示深灰色背景 */
+    border-color: var(--ds-colors-window-dark-grey-6);      /* 显示边框 */
+}
+
+/* 文件名文本输入框：用于输入节点名称/文件名 */
+.ds-node__filename-textfield > .unity-text-field__input
+{
+    max-width: var(--ds-metrics-window-pixels-1000);  /* 较大的最大宽度，适应长文件名 */
+}
+
+/* 文件名文本输入框获取焦点时的样式 */
+.ds-node__filename-textfield > .unity-text-field__input:focus
+{
+    margin: var(--ds-metrics-window-pixels-4);   /* 4像素外边距 */
+    padding: var(--ds-metrics-window-pixels-4);  /* 4像素内边距 */
+}
+
+/* 选项文本输入框：用于输入对话选项文本 */
+.ds-node__choice-textfield > .unity-text-field__input
+{
+    font-size: var(--ds-metrics-window-pixels-11);     /* 11像素字体，较小字号 */
+    height: var(--ds-metrics-window-pixels-35);        /* 固定高度35像素 */
+    max-width: var(--ds-metrics-window-pixels-1000);   /* 较大的最大宽度 */
+    min-width: var(--ds-metrics-window-pixels-0);      /* 最小宽度为0，可缩小 */
+}
+
+/* 选项文本输入框获取焦点时的样式 */
+.ds-node__choice-textfield > .unity-text-field__input:focus
+{
+    height: var(--ds-metrics-window-pixels-25);        /* 获取焦点时高度变为25像素 */
+    margin: var(--ds-metrics-window-pixels-4);         /* 4像素外边距 */
+    padding: var(--ds-metrics-window-pixels-4);        /* 4像素内边距 */
+}
+
+/* 引用文本输入框：用于输入对话内容，类似引用块样式 */
+.ds-node__quote-textfield > .unity-text-field__input
+{
+    background-color: var(--ds-colors-window-dark-grey-4);  /* 特殊背景色 */
+    border-color: transparent;                              /* 透明边框 */
+    border-left-color: var(--ds-colors-window-dark-grey-6); /* 左侧边框颜色 */
+    border-left-width: var(--ds-metrics-window-pixels-4);   /* 4像素左侧边框宽度，创建引用线 */
+    padding: var(--ds-metrics-window-pixels-16);            /* 16像素内边距，提供更多空间 */
+    max-width: var(--ds-metrics-window-pixels-600);         /* 最大宽度600像素 */
+}
+
+/* 引用文本输入框悬停时的样式 */
+.ds-node__quote-textfield > .unity-text-field__input:hover
+{
+    background-color: var(--ds-colors-window-dark-grey-5);  /* 悬停时变深 */
+}
+
+/* 引用文本输入框获取焦点时的样式 */
+.ds-node__quote-textfield > .unity-text-field__input:focus
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 获取焦点时恢复默认背景 */
+    border-color: var(--ds-colors-window-dark-grey-6);      /* 显示完整边框 */
+}
+
+/* 节点按钮通用样式：用于添加选项、删除等按钮 */
+.ds-node__button
+{
+    background-color: var(--ds-colors-window-dark-grey-5);  /* 按钮背景色 */
+    border-color: var(--ds-colors-window-dark-grey-1);      /* 边框颜色 */
+    margin: var(--ds-metrics-window-pixels-4);              /* 4像素外边距 */
+    max-height: var(--ds-metrics-window-pixels-25);         /* 最大高度25像素 */
+}
+
+/* 节点按钮悬停时的样式 */
+.ds-node__button:hover
+{
+    background-color: var(--ds-colors-window-dark-grey-2);  /* 悬停时变浅 */
+}
+
+/* 节点按钮激活（按下）时的样式 */
+.ds-node__button:active
+{
+    background-color: var(--ds-colors-window-dark-grey-3);  /* 激活时变深 */
+    color: var(--ds-colors-window-yellow);                  /* 黄色文字 */
+}
+
+/* 通用文本输入框样式：应用于所有TextField元素 */
+TextField
+{
+    margin-left: var(--ds-metrics-window-pixels-0);  /* 左侧外边距为0 */
+}
+
+/* 自定义数据容器内的折叠区域样式 */
+.ds-node__custom-data-container > Foldout
+{
+    margin-left: var(--ds-metrics-window-pixels-negative-4);  /* 负左边距，向左偏移 */
+    margin-top: var(--ds-metrics-window-pixels-4);            /* 4像素上边距 */
+}
+
+/* 折叠区域内的文本输入框样式 */
+.ds-node__custom-data-container > Foldout > TextField
+{
+    margin-left: var(--ds-metrics-window-pixels-negative-12);  /* 更大的负左边距 */
+    margin-top: var(--ds-metrics-window-pixels-8);             /* 8像素上边距 */
+}
+
+/* Unity Toggle文本标签样式（用于复选框、开关等） */
+.unity-toggle__text
+{
+    margin-left: var(--ds-metrics-window-pixels-2);  /* 2像素左侧外边距 */
+}

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d26a5b9b5728c947b324441b9f29ac5, type: 3}
+  m_Name: Unarmed
+  m_EditorClassIdentifier: 
+  itemName: Unarmd
+  itemIcon: {fileID: 21300000, guid: 00db7dcc766d44b4991b392aa36a4b6c, type: 3}
+  itemDescription: 
+  itemWeight: 0
+  weaponModel: {fileID: 8233809814366956316, guid: 36809a1ca99019f4dbaee1e2b570d469, type: 3}
+  weaponType: 0
+  strength: 0
+  intelligence: 0
+  physicalDamage: 20
+  baseStaminaCost: 20
+  lightAttackCombos: []
+  heavyAttackCombos: []
+  RollAttack: {fileID: 0}
+  RunAttack: {fileID: 0}
+  BackStepAttack: {fileID: 0}

@@ -1,0 +1,77 @@
+/* 
+   对话系统根变量定义
+   定义对话图编辑器界面使用的CSS自定义属性（CSS变量）
+   这些变量在样式表中被引用，确保界面颜色、间距和尺寸的一致性
+*/
+
+/* 根选择器，定义全局CSS变量 */
+:root
+{
+    /* ========== 颜色变量 ========== */
+
+    /* 网格背景颜色：用于GraphView的背景颜色，深灰色 */
+    --ds-colors-grid-light-grey-1: #2b2b2b;
+
+    /* 网格线颜色1：细网格线颜色，半透明深灰色，用于次级网格线 */
+    --ds-colors-grid-light-grey-2: rgba(51, 51, 51, 0.4);
+
+    /* 网格线颜色2：粗网格线颜色，不透明深灰色，用于主网格线 */
+    --ds-colors-grid-light-grey-3: rgba(51, 51, 51, 1);
+
+    /* 窗口深灰色1：主容器和背景的基色，最深的灰色 */
+    --ds-colors-window-dark-grey-1: #1D1D1E;
+
+    /* 窗口深灰色2：悬停状态的背景色，稍浅的深灰色 */
+    --ds-colors-window-dark-grey-2: #2B2D2F;
+
+    /* 窗口深灰色3：激活状态和自定义容器的背景色 */
+    --ds-colors-window-dark-grey-3: #212325;
+
+    /* 窗口深灰色4：引用文本输入框的背景色 */
+    --ds-colors-window-dark-grey-4: #232527;
+
+    /* 窗口深灰色5：按钮和某些输入框的背景色 */
+    --ds-colors-window-dark-grey-5: #252729;
+
+    /* 窗口深灰色6：边框颜色，用于输入框和容器的边框 */
+    --ds-colors-window-dark-grey-6: #27292C;
+
+    /* 窗口黄色：高亮颜色，用于激活状态、焦点状态和选中状态 */
+    --ds-colors-window-yellow: #FDD057;
+
+
+    /* ========== 尺寸变量 ========== */
+
+    /* 网格间距：网格线之间的间距，控制网格密度 */
+    --ds-metrics-grid-25: 25;
+
+    /* 负边距变量：用于调整元素位置 */
+    --ds-metrics-window-pixels-negative-12: -12px;  /* 较大的负边距，用于折叠区域内的文本输入框 */
+    --ds-metrics-window-pixels-negative-4: -4px;    /* 较小的负边距，用于折叠区域 */
+
+    /* 零边距：用于重置或设置无外边距 */
+    --ds-metrics-window-pixels-0: 0px;
+
+    /* 小间距变量 */
+    --ds-metrics-window-pixels-2: 2px;   /* 非常小的间距，用于细微调整 */
+    --ds-metrics-window-pixels-4: 4px;   /* 基础小间距，用于内边距、外边距和圆角 */
+    --ds-metrics-window-pixels-6: 6px;   /* 中等小间距，用于输入框左侧内边距 */
+    --ds-metrics-window-pixels-8: 8px;   /* 基础中等间距，用于容器内边距 */
+
+    /* 字体尺寸变量 */
+    --ds-metrics-window-pixels-11: 11px;  /* 小字号，用于选项文本输入框 */
+
+    /* 较大间距变量 */
+    --ds-metrics-window-pixels-16: 16px;  /* 较大内边距，用于引用文本输入框 */
+
+    /* 高度变量 */
+    --ds-metrics-window-pixels-25: 25px;  /* 标准高度，用于按钮和输入框 */
+    --ds-metrics-window-pixels-35: 35px;  /* 较大高度，用于工具栏和选项输入框 */
+
+    /* 宽度变量 */
+    --ds-metrics-window-pixels-120: 120px;  /* 最小宽度，用于工具栏输入框 */
+    --ds-metrics-window-pixels-160: 160px;  /* 最小宽度，用于节点输入框 */
+    --ds-metrics-window-pixels-240: 240px;  /* 最大宽度，用于节点输入框 */
+    --ds-metrics-window-pixels-600: 600px;  /* 最大宽度，用于引用文本输入框 */
+    --ds-metrics-window-pixels-1000: 1000px; /* 非常大的最大宽度，用于文件名和选项输入框 */
+}

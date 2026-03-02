@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c651c7255117e4887857a3c75a711d, type: 3}
+  m_Name: SwordLightAttack2
+  m_EditorClassIdentifier: 
+  AnimatorOverrideController: {fileID: 22100000, guid: d325fd58d142c8a4fb65bba8ae586f03, type: 2}
+  damageModifier: 1.2
+  comboTimer: 1
+  endTimer: 2
+  colliderOpenTimer: 0.8
+  colliderCloseTimer: 1.6

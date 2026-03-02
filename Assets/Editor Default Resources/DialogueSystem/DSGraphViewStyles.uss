@@ -1,0 +1,22 @@
+/* 
+   对话系统网格背景样式定义
+   用于定义GraphView中网格背景的视觉样式和布局参数
+   通过CSS自定义属性（CSS变量）实现主题化和可配置性
+*/
+
+/* 网格背景根元素选择器 */
+GridBackground
+{
+    /* 背景颜色变量：定义网格背景的基础颜色，通常为浅灰色系 */
+    --grid-background-color: var(--ds-colors-grid-light-grey-1);
+
+    /* 细线颜色变量：定义网格中普通细线的颜色，用于次级分隔线 */
+    --line-color: var(--ds-colors-grid-light-grey-2);
+
+    /* 粗线颜色变量：定义网格中主网格线的颜色，用于主要分隔线，通常比细线颜色深 */
+    --thick-line-color: var(--ds-colors-grid-light-grey-3);
+
+    /* 间距变量：定义网格线之间的间距，控制网格的密度
+       使用对话系统的度量系统变量，确保界面一致性 */
+    --spacing: var(--ds-metrics-grid-25);
+}

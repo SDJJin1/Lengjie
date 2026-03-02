@@ -1,0 +1,75 @@
+/* 
+   对话系统工具栏样式定义
+   定义对话图编辑器窗口中工具栏及其内部控件的视觉样式
+   包括背景颜色、尺寸、交互状态等
+*/
+
+/* 工具栏主容器：位于编辑器窗口顶部的操作栏 */
+Toolbar
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 深灰色背景 */
+    height: var(--ds-metrics-window-pixels-35);             /* 固定高度35像素 */
+}
+
+/* 通用文本输入框样式：应用于工具栏内的所有文本输入框 */
+TextField
+{
+    padding: var(--ds-metrics-window-pixels-4);  /* 4像素内边距 */
+}
+
+/* 通用按钮样式：应用于工具栏内的所有按钮 */
+Button
+{
+    background-color: var(--ds-colors-window-dark-grey-5);  /* 按钮背景色 */
+    border-color: var(--ds-colors-window-dark-grey-1);      /* 边框颜色 */
+    margin: var(--ds-metrics-window-pixels-4);              /* 4像素外边距 */
+    max-height: var(--ds-metrics-window-pixels-25);         /* 最大高度25像素 */
+}
+
+/* 按钮悬停状态：鼠标悬停时的样式 */
+Button:hover
+{
+    background-color: var(--ds-colors-window-dark-grey-2);  /* 悬停时变浅 */
+}
+
+/* 按钮激活状态：按下时的样式 */
+Button:active
+{
+    background-color: var(--ds-colors-window-dark-grey-3);  /* 激活时变深 */
+    color: var(--ds-colors-window-yellow);                  /* 黄色文字 */
+}
+
+/* 文本输入框标签样式：输入框上方的标签文本 */
+.unity-text-field__label
+{
+    padding: var(--ds-metrics-window-pixels-4);  /* 4像素内边距 */
+}
+
+/* 文本输入框获取焦点时的标签样式 */
+TextField:focus > .unity-text-field__label
+{
+    color: var(--ds-colors-window-yellow);  /* 黄色标签 */
+}
+
+/* 文本输入框输入区域样式 */
+.unity-text-field__input
+{
+    background-color: var(--ds-colors-window-dark-grey-1);  /* 深灰色背景 */
+    border-color: var(--ds-colors-window-dark-grey-6);      /* 较深的灰色边框 */
+    border-radius: var(--ds-metrics-window-pixels-4);       /* 4像素圆角 */
+    max-height: var(--ds-metrics-window-pixels-25);         /* 最大高度25像素 */
+    min-width: var(--ds-metrics-window-pixels-120);         /* 最小宽度120像素 */
+    padding-left: var(--ds-metrics-window-pixels-6);        /* 左侧内边距6像素 */
+}
+
+/* 文本输入框获取焦点时的输入区域样式 */
+.unity-text-field__input:focus
+{
+    color: var(--ds-colors-window-yellow);  /* 黄色输入文字 */
+}
+
+/* 工具栏按钮选中状态：用于表示某些按钮的激活状态，如迷你地图按钮 */
+.ds-toolbar__button__selected
+{
+    color: var(--ds-colors-window-yellow);  /* 黄色文字 */
+}
